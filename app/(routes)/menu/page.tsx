@@ -32,6 +32,34 @@ export default function Menu() {
         <section>
           <ProductCard />
         </section>
+        <svg
+          width="360"
+          height="288"
+          viewBox="0 0 360 288"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 27C0 12.0883 12.0883 0 27 0H333C347.912 0 360 12.0883 360 27V288H0V27Z"
+            fill="url(#pattern0_397_75)"
+          />
+          <defs>
+            <pattern
+              id="pattern0_397_75"
+              patternContentUnits="objectBoundingBox"
+              width="1"
+              height="1"
+            >
+              <use transform="matrix(0.000434028 0 0 0.00054197 0 -1.21991)" />
+            </pattern>
+            <image
+              id="image0_397_75"
+              width="2304"
+              height="4096"
+              preserveAspectRatio="none"
+            />
+          </defs>
+        </svg>
       </main>
     </>
   );
