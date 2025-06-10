@@ -1,7 +1,20 @@
+"use client";
 import logo from "../public/images/logo.jpg";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Page() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const redirectTimer = setTimeout(() => {
+      router.push("/menu");
+    }, 3000);
+
+    return () => clearTimeout(redirectTimer);
+  }, [router]);
+
   return (
     <main className="relative bg-[#FFFCF7] h-screen">
       <section className="pt-20">
