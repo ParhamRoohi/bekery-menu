@@ -4,13 +4,21 @@ import Image from "next/image";
 export default function Page() {
   return (
     <main className="relative bg-[#FFFCF7] h-screen">
-      <section className="mt-15">
-        <Image src={logo} height={400} width={400} alt="img" />
+      <section className="pt-20">
+        <Image
+          className="mx-auto w-7/12"
+          src={logo}
+          height={400}
+          width={400}
+          alt="img"
+        />
         <div className="text-[#795D4C] flex justify-center flex-col items-center gap-6">
           <h1 className="text-stone-600 text-5xl font-normal font-[FrederickatheGreat]">
             Bake Away
           </h1>
-          <span>قهوه؟ شیرینی؟ حال خوب؟ اینجاست.</span>
+          <span style={{ direction: "rtl" }}>
+            قهوه؟ شیرینی؟ حال خوب؟ اینجاست.
+          </span>
         </div>
       </section>
       <svg
@@ -26,7 +34,6 @@ export default function Page() {
           fill="#b79a81"
           stroke="none"
         >
-          {" "}
           <path d="M1021 2354 c-30 -38 -29 -107 1 -128 30 -22 314 -23 343 -2 33 24 12 156 -25 156 -6 0 -3 -11 6 -24 8 -14 14 -35 12 -48 -3 -22 -4 -22 -168 -23 -153 0 -165 1 -168 19 -2 10 6 31 17 47 27 36 10 39 -18 3z m15 -83 c5 -5 78 -6 172 -3 163 7 173 5 152 -28 -8 -12 -38 -15 -165 -15 -144 0 -158 2 -171 19 -22 31 -13 51 12 27z" />{" "}
           <path d="M1077 2373 c-12 -11 -8 -43 6 -43 12 1 53 50 41 50 -4 0 -16 -8 -26 -17 -18 -16 -18 -16 -12 0 6 18 2 22 -9 10z" />{" "}
           <path d="M1152 2353 c4 -38 24 -39 43 -4 8 17 11 31 6 31 -5 0 -13 -9 -16 -20 -4 -11 -10 -18 -15 -15 -5 3 -7 12 -3 20 3 8 0 15 -7 15 -6 0 -10 -11 -8 -27z" />{" "}
