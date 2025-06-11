@@ -1,11 +1,16 @@
+"use client";
 import React from "react";
 import Image from "next/image";
-import CartIem from "../../ui/cart/cart-item";
-import { products } from "@/app/data/mock-products";
+import CartItem from "../../ui/cart/cart-item";
+// import { products } from "@/app/data/mock-products";
 import img from "../../../public/images/cart-bg.png";
-import Link from "next/link";
+import { useCart } from "../../context/cart-context";
 
-export default function page() {
+import Link from "next/link";
+type CartItem = { id: number; title: string; price: number; quantity: number };
+
+export default function Page() {
+  const { cart } = useCart();
   return (
     <>
       <header>
@@ -18,8 +23,17 @@ export default function page() {
         />
       </header>
       <main className="mt-10">
-        <div className="flex flex-row-reverse items-center justify-between px-6">
-          <span className="text-stone-600 text-lg font-normal">سبد خرید</span>
+        <div className="flex flex-row items-center justify-between px-6">
+          <div className="flex items-center gap-2">
+            <span className="text-stone-600 text-lg font-normal flex flex-row justify-center items-center">
+              سبد خرید
+              {cart.length > 0 && (
+                <span className="text-stone-600 text-base font-normal w-5 h-5 flex items-center justify-center">
+                  {cart.length}
+                </span>
+              )}
+            </span>
+          </div>
           <Link href={"/menu"}>
             <svg
               width="18"
@@ -36,13 +50,13 @@ export default function page() {
           </Link>
         </div>
 
-        <section className="flex flex-col gap-4 p-5">
-          {products.map((product, index) => (
-            <CartIem
-              key={index}
-              title={product.Category.CategoryFA}
-              price={product.Price.CurrentPrice}
-              quantity={product.Quantity}
+        <section className="flex flex-col gap-4 p-5 ">
+          {cart.map((item) => (
+            <CartItem
+              key={item.id}
+              title={item.title}
+              price={item.price}
+              quantity={item.quantity}
             />
           ))}
         </section>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { vazirmatn, FrederickatheGreat } from "./font";
+import { CartProvider } from "../app/context/cart-context";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,10 +18,11 @@ export default function RootLayout({
       <body
         className={`${vazirmatn.variable} ${FrederickatheGreat.variable} antialiased`}
       >
-        {" "}
-        <main className="max-w-[450px] bg-[#FAF7F2] overflow-clip mx-auto">
-          {children}
-        </main>
+        <CartProvider>
+          <main className="max-w-[450px] bg-[#FAF7F2] overflow-clip mx-auto">
+            {children}
+          </main>
+        </CartProvider>
       </body>
     </html>
   );

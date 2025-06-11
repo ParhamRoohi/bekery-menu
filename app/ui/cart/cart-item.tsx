@@ -8,7 +8,7 @@ type cartItemProps = {
 
 export default function cartItem({ title, price, quantity }: cartItemProps) {
   return (
-    <section className="flex flex-row-reverse justify-between">
+    <section className="flex flex-row justify-between">
       <div className="flex flex-col items-end gap-1">
         <span className="text-stone-600 text-sm font-bold">{title}</span>
         <span className="text-orange-300 text-sm font-normal">

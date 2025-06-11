@@ -1,9 +1,12 @@
+"use client";
 import CategoryBar from "@/app/ui/menu/category-bar";
 import ProductCard from "@/app/ui/menu/product-card";
 import { products } from "@/app/data/mock-products";
 import Link from "next/link";
+import { useCart } from "../../context/cart-context";
 
 export default function Menu() {
+  const { cart } = useCart();
   const categorizedProducts = products.reduce((acc, product) => {
     const categoryKey = product.Category.CategoryFA;
     if (!acc[categoryKey]) {
@@ -17,11 +20,11 @@ export default function Menu() {
 
   return (
     <>
-      <header className="py-10 px-5">
-        <h2 className="text-stone-600 text-2xl font-normal font-[FrederickatheGreat] text-center">
+      <header className="py-10 flex flex-row justify-around">
+        <h2 className="text-stone-600 text-3xl font-bold font-['Playfair_Display'] mr-30">
           Bake Away
         </h2>
-        <Link href="/cart">
+        <Link href="/cart" className="relative">
           <svg
             width="28"
             height="32"
@@ -37,6 +40,9 @@ export default function Menu() {
               strokeLinejoin="round"
             />
           </svg>
+          <span className="absolute -top-1 -right-2 bg-red-500 rounded-[100px] text-white  w-5 h-5 flex items-center justify-center text-xs">
+            {cart.length}
+          </span>
         </Link>
       </header>
       <main>
@@ -58,10 +64,12 @@ export default function Menu() {
               {categorizedProducts[category].map((product) => (
                 <ProductCard
                   key={product.ProductID}
+                  id={product.ProductID}
                   title={product.Title}
                   description={product.Description}
                   image={product.ProductImage}
-                  price={product.Price.CurrentPrice}
+                  curPrice={product.Price.CurrentPrice}
+                  prevPrice={product.Price.PrevPrice}
                   quantity={product.Quantity}
                 />
               ))}
