@@ -168,8 +168,8 @@ export const products: Product[] = [
       CategoryEN: "Dessert",
     },
     Price: {
-      CurrentPrice: 48000,
-      PrevPrice: 50000,
+      CurrentPrice: 480,
+      PrevPrice: 500,
     },
     Quantity: 10,
   },
@@ -258,8 +258,8 @@ export const products: Product[] = [
       CategoryEN: "Cold Drink",
     },
     Price: {
-      CurrentPrice: 59000,
-      PrevPrice: 64000,
+      CurrentPrice: 590,
+      PrevPrice: 640,
     },
     Quantity: 22,
   },

@@ -10,7 +10,8 @@ import Link from "next/link";
 type CartItem = { id: number; title: string; price: number; quantity: number };
 
 export default function Page() {
-  const { cart } = useCart();
+  const { cart, updateCartItem } = useCart();
+
   return (
     <>
       <header>
@@ -50,13 +51,15 @@ export default function Page() {
           </Link>
         </div>
 
-        <section className="flex flex-col gap-4 p-5 ">
+        <section className="flex flex-col gap-4 p-5">
           {cart.map((item) => (
             <CartItem
               key={item.id}
+              id={item.id}
               title={item.title}
               price={item.price}
               quantity={item.quantity}
+              updateCartItem={updateCartItem}
             />
           ))}
         </section>
