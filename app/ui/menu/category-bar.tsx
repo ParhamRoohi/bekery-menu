@@ -23,11 +23,11 @@ export default function CategoryBar({ categories }: { categories: string[] }) {
   }, []);
 
   return (
-    <section className="w-full overflow-x-scroll">
-      <ul
-        ref={containerRef}
-        className="flex flex-row-reverse px-5 py-4 gap-3 w-fit overflow-x-scroll"
-      >
+    <section
+      className="w-full overflow-x-scroll"
+      style={{ scrollbarWidth: "thin" }}
+    >
+      <ul ref={containerRef} className="flex flex-row px-5 py-4 gap-3 w-fit">
         {categories.map((category, index) => (
           <CategoryItem
             key={index}

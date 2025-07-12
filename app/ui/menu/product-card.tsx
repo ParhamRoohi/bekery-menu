@@ -54,7 +54,7 @@ export default function ProductCard({
         width={100}
         height={100}
         alt="product image"
-        className="rounded-[10px] h-24 w-24 object-cover"
+        className="rounded-[10px] h-26 w-26 object-cover"
       />
       <div className="flex flex-col justify-between w-full">
         <div className="flex flex-col gap-1 items-start">
