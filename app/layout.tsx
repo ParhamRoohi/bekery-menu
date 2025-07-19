@@ -19,7 +19,7 @@ export default function RootLayout({
         className={`${vazirmatn.variable} ${FrederickatheGreat.variable} antialiased`}
       >
         <CartProvider>
-          <main className="max-w-[450px] bg-[#FAF7F2] overflow-clip mx-auto">
+          <main className="max-w-[450px] bg-[#FAF7F2] overflow-clip mx-auto h-full">
             {children}
           </main>
         </CartProvider>

@@ -28,7 +28,7 @@ export default function Page() {
         />
         <div className="text-[#795D4C] flex justify-center flex-col items-center gap-6">
           <h1 className="text-stone-600 text-5xl font-bold font-['Playfair_Display']">
-            Bake Away
+            Crust
           </h1>
           <span style={{ direction: "rtl" }}>
             قهوه؟ شیرینی؟ حال خوب؟ اینجاست.

@@ -1,62 +1,57 @@
 "use client";
-import React from "react";
+import { useState, useEffect, useRef } from "react";
+import { products } from "../../data/mock-products";
 import CategoryBar from "@/app/ui/menu/category-bar";
 import ProductCard from "@/app/ui/menu/product-card";
-import { products } from "@/app/data/mock-products";
-import Link from "next/link";
 import { useCart } from "../../context/cart-context";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { useState, useEffect } from "react";
+import Link from "next/link";
 
-export default function Menu() {
+export default function MenuPage() {
   const { cart } = useCart();
-  const [, forceUpdate] = React.useState({});
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [activeCategory, setActiveCategory] = useState<string>("");
+  const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
 
-  useEffect(() => {
-    const categoryParam = searchParams.get("category");
-    if (categoryParam) {
-      setSelectedCategory(categoryParam);
-    }
-  }, [searchParams]);
-
-  useEffect(() => {
-    const currentParams = new URLSearchParams(searchParams.toString());
-    if (selectedCategory) {
-      currentParams.set("category", selectedCategory);
-    } else {
-      currentParams.delete("category");
-    }
-    router.push(`${pathname}?${currentParams.toString()}`);
-  }, [selectedCategory, pathname, router, searchParams]);
-
-  const handleCategoryChange = (event) => {
-    setSelectedCategory(event.target.value);
-  };
-
-  React.useEffect(() => {
-    forceUpdate({});
-  }, []);
-  const categorizedProducts = products.reduce((acc, product) => {
-    const categoryKey = product.Category.CategoryFA;
-    if (!acc[categoryKey]) {
-      acc[categoryKey] = [];
-    }
-    acc[categoryKey].push(product);
+  // Group products by category
+  const groupedProducts = products.reduce((acc, product) => {
+    const category = product.Category.CategoryFA;
+    if (!acc[category]) acc[category] = [];
+    acc[category].push(product);
     return acc;
   }, {} as Record<string, typeof products>);
 
-  const categories = Object.keys(categorizedProducts);
+  const categories = Object.keys(groupedProducts);
+
+  useEffect(() => {
+    if (categories.length > 0 && !activeCategory) {
+      setActiveCategory(categories[0]);
+    }
+  }, [categories, activeCategory]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+            setActiveCategory(entry.target.id);
+          }
+        });
+      },
+      { threshold: [0.3], rootMargin: "-50px 0px -50% 0px" }
+    );
+
+    Object.values(sectionRefs.current).forEach((section) => {
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <main className="relative">
-      <header className="sticky z-50 bg-[#FAF7F2] top-0 flex flex-col  py-10 justify-end gap-10 w-full">
-        <div className="relative flex flex-row items-center justify-center mx-auto w-full">
+    <section className="relative pb-20">
+      <div className="sticky top-0 bg-[#FAF7F2] z-10 bg- shadow-sm">
+        <div className="relative flex flex-row items-center justify-center mx-auto w-full py-11">
           <h2 className="text-stone-600 text-center text-3xl font-bold font-['Playfair_Display']">
-            Bake & Take
+            Crust
           </h2>
           <div className="absolute left-6">
             <Link href="/cart" className="relative">
@@ -75,44 +70,53 @@ export default function Menu() {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span className="absolute -top-1 -right-2 bg-[#D16060] rounded-[100px] text-black  w-5 h-5 flex items-center justify-center text-xs">
-                {cart.length}
+              <span className="absolute -top-1 -right-2 bg-[#cd4444] rounded-full text-white  w-5 h-5 flex items-center justify-center text-xs">
+                <span className="h-[13.5px]">{cart.length}</span>
               </span>
             </Link>
           </div>
         </div>
-        <section>
-          <CategoryBar categories={categories} />
-        </section>
-      </header>
-      <section>
-        {categories.map((category, categoryIndex) => (
-          <div key={categoryIndex} className="mb-8">
-            <div className="flex flex-row items-center gap-6 px-5 py-3">
-              <hr className="border-b  w-full border-[#DAD2C94D]" />
-              <h3 className="text-stone-700 text-xl font-semibold  whitespace-nowrap">
-                {category}
-              </h3>
-              <hr className="border-b w-full border-[#DAD2C94D]" />
-            </div>
+        <div>
+          <CategoryBar
+            categories={categories}
+            activeCategory={activeCategory}
+            onCategoryClick={(category) => {
+              setActiveCategory(category);
+              const section = sectionRefs.current[category];
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+            }}
+          />
+        </div>
+      </div>
 
-            <section className="flex flex-col gap-4 px-5 py-3">
-              {categorizedProducts[category].map((product) => (
-                <ProductCard
-                  key={product.ProductID}
-                  id={product.ProductID}
-                  title={product.Title}
-                  description={product.Description}
-                  image={product.ProductImage}
-                  curPrice={product.Price.CurrentPrice}
-                  prevPrice={product.Price.PrevPrice}
-                  quantity={product.Quantity}
-                />
-              ))}
-            </section>
+      {categories.map((category) => (
+        <section
+          key={category}
+          id={category}
+          ref={(el) => {
+            sectionRefs.current[category] = el;
+          }}
+          className="px-4 pt-4"
+        >
+          <h2 className="text-stone-600 text-xl font-bold mb-4">{category}</h2>
+          <div className="flex flex-col gap-3">
+            {groupedProducts[category].map((product) => (
+              <ProductCard
+                key={product.ProductID}
+                id={product.ProductID}
+                title={product.Title}
+                curPrice={product.Price.CurrentPrice}
+                prevPrice={product.Price.PrevPrice}
+                image={product.ProductImage}
+                description={product.Description}
+                quantity={product.Quantity}
+              />
+            ))}
           </div>
-        ))}
-      </section>
-    </main>
+        </section>
+      ))}
+    </section>
   );
 }

@@ -21,7 +21,7 @@ export const products: Product[] = [
       CurrentPrice: 450,
       PrevPrice: 500,
     },
-    Quantity: 50,
+    Quantity: 0,
   },
   {
     ProductID: 2,
@@ -36,7 +36,7 @@ export const products: Product[] = [
       CurrentPrice: 550,
       PrevPrice: 600,
     },
-    Quantity: 40,
+    Quantity: 0,
   },
   {
     ProductID: 3,
@@ -51,7 +51,7 @@ export const products: Product[] = [
       CurrentPrice: 520,
       PrevPrice: 570,
     },
-    Quantity: 30,
+    Quantity: 0,
   },
   {
     ProductID: 4,
@@ -66,7 +66,7 @@ export const products: Product[] = [
       CurrentPrice: 480,
       PrevPrice: 520,
     },
-    Quantity: 45,
+    Quantity: 0,
   },
   {
     ProductID: 5,
@@ -81,7 +81,7 @@ export const products: Product[] = [
       CurrentPrice: 600,
       PrevPrice: 600,
     },
-    Quantity: 25,
+    Quantity: 0,
   },
   {
     ProductID: 6,
@@ -96,7 +96,7 @@ export const products: Product[] = [
       CurrentPrice: 580,
       PrevPrice: 630,
     },
-    Quantity: 20,
+    Quantity: 0,
   },
   {
     ProductID: 7,
@@ -111,7 +111,7 @@ export const products: Product[] = [
       CurrentPrice: 620,
       PrevPrice: 670,
     },
-    Quantity: 18,
+    Quantity: 0,
   },
   {
     ProductID: 8,
@@ -126,7 +126,7 @@ export const products: Product[] = [
       CurrentPrice: 530,
       PrevPrice: 580,
     },
-    Quantity: 22,
+    Quantity: 0,
   },
   {
     ProductID: 9,
@@ -141,7 +141,7 @@ export const products: Product[] = [
       CurrentPrice: 400,
       PrevPrice: 450,
     },
-    Quantity: 30,
+    Quantity: 0,
   },
   {
     ProductID: 10,
@@ -156,7 +156,7 @@ export const products: Product[] = [
       CurrentPrice: 390,
       PrevPrice: 420,
     },
-    Quantity: 28,
+    Quantity: 0,
   },
   {
     ProductID: 11,
@@ -171,7 +171,7 @@ export const products: Product[] = [
       CurrentPrice: 480,
       PrevPrice: 500,
     },
-    Quantity: 10,
+    Quantity: 0,
   },
   {
     ProductID: 12,
@@ -186,7 +186,7 @@ export const products: Product[] = [
       CurrentPrice: 520,
       PrevPrice: 570,
     },
-    Quantity: 12,
+    Quantity: 0,
   },
   {
     ProductID: 13,
@@ -201,7 +201,7 @@ export const products: Product[] = [
       CurrentPrice: 460,
       PrevPrice: 490,
     },
-    Quantity: 15,
+    Quantity: 0,
   },
   {
     ProductID: 14,
@@ -216,7 +216,7 @@ export const products: Product[] = [
       CurrentPrice: 350,
       PrevPrice: 380,
     },
-    Quantity: 20,
+    Quantity: 0,
   },
   {
     ProductID: 15,
@@ -231,7 +231,7 @@ export const products: Product[] = [
       CurrentPrice: 330,
       PrevPrice: 360,
     },
-    Quantity: 18,
+    Quantity: 0,
   },
   {
     ProductID: 16,
@@ -246,7 +246,7 @@ export const products: Product[] = [
       CurrentPrice: 500,
       PrevPrice: 550,
     },
-    Quantity: 20,
+    Quantity: 0,
   },
   {
     ProductID: 17,
@@ -261,7 +261,7 @@ export const products: Product[] = [
       CurrentPrice: 590,
       PrevPrice: 640,
     },
-    Quantity: 22,
+    Quantity: 0,
   },
   {
     ProductID: 18,
@@ -276,7 +276,7 @@ export const products: Product[] = [
       CurrentPrice: 570,
       PrevPrice: 600,
     },
-    Quantity: 19,
+    Quantity: 0,
   },
   {
     ProductID: 19,
@@ -291,7 +291,7 @@ export const products: Product[] = [
       CurrentPrice: 850,
       PrevPrice: 900,
     },
-    Quantity: 14,
+    Quantity: 0,
   },
   {
     ProductID: 20,
@@ -306,6 +306,6 @@ export const products: Product[] = [
       CurrentPrice: 780,
       PrevPrice: 830,
     },
-    Quantity: 16,
+    Quantity: 0,
   },
 ];
