@@ -50,7 +50,7 @@ export default function cartItem({
           </svg>
         </button>
         <span className="leading-10 flex item-center justify-center pt-1">
-          {quantity}
+          {quantity.toLocaleString("fa-IR")}
         </span>
         <button
           onClick={() =>

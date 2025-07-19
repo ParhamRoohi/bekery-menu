@@ -24,7 +24,8 @@ export default function Page() {
           src={logo}
           height={400}
           width={400}
-          alt="img"
+          alt="Logo image in the splash screen"
+          priority={true}
         />
         <div className="text-[#795D4C] flex justify-center flex-col items-center gap-6">
           <h1 className="text-stone-600 text-5xl font-bold font-['Playfair_Display']">
@@ -39,8 +40,9 @@ export default function Page() {
         src={img}
         height={400}
         width={400}
-        alt="image"
-        className=" w-full"
+        alt="Footer image in the splash screen"
+        className="mt-9 w-full"
+        priority={true}
       />
     </main>
   );

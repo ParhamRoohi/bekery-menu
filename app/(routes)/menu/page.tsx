@@ -71,7 +71,9 @@ export default function MenuPage() {
                 />
               </svg>
               <span className="absolute -top-1 -right-2 bg-[#cd4444] rounded-full text-white  w-5 h-5 flex items-center justify-center text-xs">
-                <span className="h-[13.5px]">{cart.length}</span>
+                <span className="h-[13.5px]">
+                  {cart.length.toLocaleString("fa-IR")}
+                </span>
               </span>
             </Link>
           </div>

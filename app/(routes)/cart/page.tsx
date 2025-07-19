@@ -26,11 +26,11 @@ export default function Page() {
         <main className="mt-10 h-full">
           <div className="flex flex-row items-center justify-between px-6">
             <div className="flex items-center gap-2">
-              <span className="text-stone-600 text-lg font-normal flex flex-row justify-center items-center">
+              <span className="text-stone-600 text-lg font-normal flex flex-row justify-center gap-1 items-center">
                 سبد خرید
                 {cart.length > 0 && (
                   <span className="text-stone-600 text-base font-normal w-5 h-5 flex items-center justify-center">
-                    {cart.length}
+                    {cart.length.toLocaleString("fa-IR")}
                   </span>
                 )}
               </span>

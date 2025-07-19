@@ -1,5 +1,3 @@
-// /Users/parham/Desktop/bekery-menu/app/ui/menu/category-bar.tsx
-
 import { useEffect, useRef } from "react";
 import CategoryItem from "./catgeroy-item";
 
@@ -28,15 +26,13 @@ export default function CategoryBar({
 
     const activeItem = container.querySelector(
       `[data-category="${activeCategory}"]`
-    );
-    if (activeItem) {
-      const containerWidth = container.offsetWidth;
-      const itemLeft = (activeItem as HTMLElement).offsetLeft;
-      const itemWidth = (activeItem as HTMLElement).offsetWidth;
+    ) as HTMLElement | null;
 
-      container.scrollTo({
-        left: itemLeft - containerWidth / 2 + itemWidth / 2,
+    if (activeItem) {
+      activeItem.scrollIntoView({
         behavior: "smooth",
+        inline: "center",
+        block: "nearest",
       });
     }
   }, [activeCategory]);
