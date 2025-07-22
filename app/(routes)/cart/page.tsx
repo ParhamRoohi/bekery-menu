@@ -16,6 +16,7 @@ export default function Page() {
     <>
       <section className="h-screen bg-[#FAF7F2] ">
         <Image
+          priority={true}
           src={img}
           width={1000}
           height={1000}

@@ -11,7 +11,7 @@ export default function Page() {
   useEffect(() => {
     const redirectTimer = setTimeout(() => {
       router.push("/menu");
-    }, 3000);
+    }, 1500);
 
     return () => clearTimeout(redirectTimer);
   }, [router]);

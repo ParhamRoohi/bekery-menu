@@ -50,11 +50,11 @@ export default function MenuPage() {
     <section className="relative pb-20">
       <div className="sticky top-0 bg-[#FAF7F2] z-10 bg- shadow-sm">
         <div className="relative flex flex-row items-center justify-center mx-auto w-full py-11">
-          <h2 className="text-stone-600 text-center text-3xl font-bold font-['Playfair_Display']">
+          <h2 className="text-stone-600 text-center text-3xl font-bold font-[Playfair_Display]">
             Crust
           </h2>
           <div className="absolute left-6">
-            <Link href="/cart" className="relative">
+            <Link href="/cart" className="relative inline-block">
               <svg
                 width="28"
                 height="32"
@@ -70,8 +70,8 @@ export default function MenuPage() {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span className="absolute -top-1 -right-2 bg-[#cd4444] rounded-full text-white  w-5 h-5 flex items-center justify-center text-xs">
-                <span className="h-[13.5px]">
+              <span className="absolute -top-2 -right-2 bg-[#cd4444] rounded-full text-white w-5 h-5 flex items-center justify-center text-xs">
+                <span className="leading-none">
                   {cart.length.toLocaleString("fa-IR")}
                 </span>
               </span>
