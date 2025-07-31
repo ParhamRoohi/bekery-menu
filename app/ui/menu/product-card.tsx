@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import { useCart } from "../../context/cart-context";
 
 type ProductCardProps = {
@@ -10,7 +10,6 @@ type ProductCardProps = {
   prevPrice: number;
   image: string;
   description?: string;
-  quantity: number;
 };
 
 export default function ProductCard({
@@ -20,14 +19,15 @@ export default function ProductCard({
   prevPrice,
   image,
   description,
-  quantity,
 }: ProductCardProps) {
-  const [productQuantity, setProductQuantity] = useState(quantity || 0);
-  const { updateCartItem } = useCart();
+  const { cart, updateCartItem } = useCart();
+
+  // Get the current quantity of this item from the cart
+  const cartItem = cart.find((item) => item.id === id);
+  const productQuantity = cartItem ? cartItem.quantity : 0;
 
   const handleIncrease = () => {
     const newQuantity = productQuantity + 1;
-    setProductQuantity(newQuantity);
     updateCartItem({
       id,
       title,
@@ -39,7 +39,6 @@ export default function ProductCard({
 
   const handleDecrease = () => {
     const newQuantity = productQuantity > 0 ? productQuantity - 1 : 0;
-    setProductQuantity(newQuantity);
     updateCartItem({
       id,
       title,

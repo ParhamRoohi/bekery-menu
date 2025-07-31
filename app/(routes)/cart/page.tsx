@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import CartItem from "../../ui/cart/cart-item";
-// import { products } from "@/app/data/mock-products";
 import img from "../../../public/images/cart-bg.png";
 import { useCart } from "../../context/cart-context";
 
@@ -31,7 +30,7 @@ export default function Page() {
                 سبد خرید
                 {cart.length > 0 && (
                   <span className="text-stone-600 text-base font-normal w-5 h-5 flex items-center justify-center">
-                    {cart.length.toLocaleString("fa-IR")}
+                    ({cart.length.toLocaleString("fa-IR")})
                   </span>
                 )}
               </span>

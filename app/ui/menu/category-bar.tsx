@@ -42,7 +42,7 @@ export default function CategoryBar({
       className="w-full overflow-x-scroll sticky top-0 z-10 shadow-sm"
       style={{ scrollbarWidth: "thin" }}
     >
-      <ul ref={containerRef} className="flex flex-row px-5 py-4 gap-3 w-fit">
+      <ul ref={containerRef} className="flex flex-row px-4 py-4 gap-3 w-fit">
         {categories.map((category) => (
           <CategoryItem
             key={category}

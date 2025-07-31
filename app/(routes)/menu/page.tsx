@@ -11,7 +11,12 @@ export default function MenuPage() {
   const [activeCategory, setActiveCategory] = useState<string>("");
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
 
-  // Group products by category
+  // Calculate total quantity of items in cart
+  const totalCartQuantity = cart.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
+
   const groupedProducts = products.reduce((acc, product) => {
     const category = product.Category.CategoryFA;
     if (!acc[category]) acc[category] = [];
@@ -72,7 +77,7 @@ export default function MenuPage() {
               </svg>
               <span className="absolute -top-2 -right-2 bg-[#cd4444] rounded-full text-white w-5 h-5 flex items-center justify-center text-xs">
                 <span className="leading-none">
-                  {cart.length.toLocaleString("fa-IR")}
+                  {totalCartQuantity.toLocaleString("fa-IR")}
                 </span>
               </span>
             </Link>
@@ -102,7 +107,9 @@ export default function MenuPage() {
           }}
           className="px-4 pt-4"
         >
-          <h2 className="text-stone-600 text-xl font-bold mb-4">{category}</h2>
+          <h2 className="text-stone-600 text-xl font-bold mb-2 px-2">
+            {category}
+          </h2>
           <div className="flex flex-col gap-3">
             {groupedProducts[category].map((product) => (
               <ProductCard
@@ -113,7 +120,6 @@ export default function MenuPage() {
                 prevPrice={product.Price.PrevPrice}
                 image={product.ProductImage}
                 description={product.Description}
-                quantity={product.Quantity}
               />
             ))}
           </div>

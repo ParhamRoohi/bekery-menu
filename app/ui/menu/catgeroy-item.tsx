@@ -15,7 +15,7 @@ export default function CategoryItem({
   return (
     <li {...props} onClick={onClick} className="cursor-pointer">
       <span
-        className={`text-nowrap mx-3 my-2 text-sm font-normal rounded-[49px] px-3 py-2 ${activeClasses}`}
+        className={`text-nowrap  my-2 text-sm font-normal rounded-[49px] px-3 py-2 ${activeClasses}`}
       >
         {title}
       </span>
