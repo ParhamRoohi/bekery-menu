@@ -1,5 +1,4 @@
 "use client";
-import logo from "../public/images/Icon.svg";
 import img from "../public/images/splashScreen.webp";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
