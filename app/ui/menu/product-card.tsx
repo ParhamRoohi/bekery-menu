@@ -22,7 +22,6 @@ export default function ProductCard({
 }: ProductCardProps) {
   const { cart, updateCartItem } = useCart();
 
-  // Get the current quantity of this item from the cart
   const cartItem = cart.find((item) => item.id === id);
   const productQuantity = cartItem ? cartItem.quantity : 0;
 
@@ -111,7 +110,7 @@ export default function ProductCard({
                 onClick={() => {
                   handleIncrease();
                 }}
-                className="bg-[#5C4033] text-white px-2 py-1 rounded-lg flex flex-row gap-1.5 items-center text-sm font-normal"
+                className="bg-[#49101a] text-white px-2 py-1 rounded-lg flex flex-row gap-1.5 items-center text-sm font-normal"
               >
                 افزودن
                 <svg

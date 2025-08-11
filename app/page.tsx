@@ -17,7 +17,7 @@ export default function Page() {
   }, [router]);
 
   return (
-    <main className="relative bg-[#FFFCF7] h-screen">
+    <main className="relative bg-[#F9F3F4] h-screen">
       <section className="pt-20">
         <Image
           className="mx-auto w-7/12"

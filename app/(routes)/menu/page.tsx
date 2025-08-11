@@ -11,7 +11,6 @@ export default function MenuPage() {
   const [activeCategory, setActiveCategory] = useState<string>("");
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
 
-  // Calculate total quantity of items in cart
   const totalCartQuantity = cart.reduce(
     (total, item) => total + item.quantity,
     0
@@ -53,7 +52,7 @@ export default function MenuPage() {
 
   return (
     <section className="relative pb-20">
-      <div className="sticky top-0 bg-[#FAF7F2] z-10 bg- shadow-sm">
+      <div className="sticky top-0 bg-[#F9F3F4] z-10 bg- shadow-sm">
         <div className="relative flex flex-row items-center justify-center mx-auto w-full py-11">
           <h2 className="text-stone-600 text-center text-3xl font-bold font-[Playfair_Display]">
             Crust
