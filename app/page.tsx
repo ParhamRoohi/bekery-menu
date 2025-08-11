@@ -21,7 +21,7 @@ export default function Page() {
         <div className="flex justify-center flex-col items-center gap-6">
 
           <Image
-            src={"/images/C + Tagline _ Red-01.svg"}
+            src={"/images/splashscreen-image.svg"}
             width={100}
             height={100}
             alt="splash screen"
