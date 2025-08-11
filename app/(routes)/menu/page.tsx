@@ -5,6 +5,7 @@ import CategoryBar from "@/app/ui/menu/category-bar";
 import ProductCard from "@/app/ui/menu/product-card";
 import { useCart } from "../../context/cart-context";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function MenuPage() {
   const { cart } = useCart();
@@ -53,10 +54,8 @@ export default function MenuPage() {
   return (
     <section className="relative pb-20">
       <div className="sticky top-0 bg-[#F9F3F4] z-10 bg- shadow-sm">
-        <div className="relative flex flex-row items-center justify-center mx-auto w-full py-11">
-          <h2 className="text-stone-600 text-center text-3xl font-bold font-[Playfair_Display]">
-            Crust
-          </h2>
+        <div className="relative flex flex-row items-center justify-center mx-auto w-full py-10">
+         <Image className="w-32" src={'./images/logo 3.svg'} width={100} height={100} alt="Menu page logo"/>
           <div className="absolute left-6">
             <Link href="/cart" className="relative inline-block">
               <svg
