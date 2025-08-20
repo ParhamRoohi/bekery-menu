@@ -17,9 +17,8 @@ export default function Page() {
 
   return (
     <main className=" relative bg-[#F9F3F4] h-screen">
-      <section className="pt-52">
+      <section className="pt-30">
         <div className="flex justify-center flex-col items-center gap-6">
-
           <Image
             src={"/images/splashscreen-image.svg"}
             width={100}

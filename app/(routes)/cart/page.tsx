@@ -27,7 +27,7 @@ export default function Page() {
           <div className="flex flex-row items-center justify-between px-6">
             <div className="flex items-center gap-2">
               <span className="text-stone-600 text-xl font-[450] flex flex-row justify-center gap-1 items-center">
-                سبد خرید
+                یادداشت ها
                 {cart.length > 0 && (
                   <span className="text-stone-600 text-base font-normal w-5 h-5 flex items-center justify-center">
                     ({cart.length.toLocaleString("fa-IR")})

@@ -41,7 +41,7 @@ export default function MenuPage() {
           }
         });
       },
-      { threshold: [0.3], rootMargin: "-50px 0px -50% 0px" }
+      { threshold: [0.3], rootMargin: "-50px 0px 0px 0px" }
     );
 
     Object.values(sectionRefs.current).forEach((section) => {
