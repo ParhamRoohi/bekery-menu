@@ -55,7 +55,13 @@ export default function MenuPage() {
     <section className="relative pb-20">
       <div className="sticky top-0 bg-[#F9F3F4] z-10 bg- shadow-sm">
         <div className="relative flex flex-row items-center justify-center mx-auto w-full py-10">
-         <Image className="w-32" src={'./images/logo 3.svg'} width={100} height={100} alt="Menu page logo"/>
+          <Image
+            className="w-32"
+            src={"./images/logo 3.svg"}
+            width={100}
+            height={100}
+            alt="Menu page logo"
+          />
           <div className="absolute left-6">
             <Link href="/cart" className="relative inline-block">
               <svg
@@ -115,7 +121,7 @@ export default function MenuPage() {
                 id={product.ProductID}
                 title={product.Title}
                 curPrice={product.Price.CurrentPrice}
-                prevPrice={product.Price.PrevPrice}
+                // prevPrice={product.Price.PrevPrice}
                 image={product.ProductImage}
                 description={product.Description}
               />

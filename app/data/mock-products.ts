@@ -4,7 +4,7 @@ type Product = {
   ProductImage: string;
   Description: string;
   Category: { CategoryFA: string; CategoryEN: string };
-  Price: { CurrentPrice: number; PrevPrice: number };
+  Price: { CurrentPrice: number; PrevPrice?: number };
   Quantity: number;
 };
 export const products: Product[] = [
@@ -20,7 +20,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 450,
-  //     PrevPrice: 500,
+  //     //PrevPrice: 500,
   //   },
   //   Quantity: 0,
   // },
@@ -35,7 +35,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 550,
-  //     PrevPrice: 600,
+  //     //PrevPrice: 600,
   //   },
   //   Quantity: 0,
   // },
@@ -50,7 +50,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 520,
-  //     PrevPrice: 570,
+  //     //PrevPrice: 570,
   //   },
   //   Quantity: 0,
   // },
@@ -65,7 +65,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 480,
-  //     PrevPrice: 520,
+  //     //PrevPrice: 520,
   //   },
   //   Quantity: 0,
   // },
@@ -80,7 +80,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 600,
-  //     PrevPrice: 600,
+  //     //PrevPrice: 600,
   //   },
   //   Quantity: 0,
   // },
@@ -95,7 +95,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 580,
-  //     PrevPrice: 630,
+  //     //PrevPrice: 630,
   //   },
   //   Quantity: 0,
   // },
@@ -110,7 +110,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 620,
-  //     PrevPrice: 670,
+  //     //PrevPrice: 670,
   //   },
   //   Quantity: 0,
   // },
@@ -125,7 +125,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 530,
-  //     PrevPrice: 580,
+  //     //PrevPrice: 580,
   //   },
   //   Quantity: 0,
   // },
@@ -140,7 +140,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 400,
-  //     PrevPrice: 450,
+  //     //PrevPrice: 450,
   //   },
   //   Quantity: 0,
   // },
@@ -155,7 +155,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 390,
-  //     PrevPrice: 420,
+  //     //PrevPrice: 420,
   //   },
   //   Quantity: 0,
   // },
@@ -170,7 +170,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 480,
-  //     PrevPrice: 500,
+  //     //PrevPrice: 500,
   //   },
   //   Quantity: 0,
   // },
@@ -185,7 +185,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 520,
-  //     PrevPrice: 570,
+  //     //PrevPrice: 570,
   //   },
   //   Quantity: 0,
   // },
@@ -200,7 +200,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 460,
-  //     PrevPrice: 490,
+  //     //PrevPrice: 490,
   //   },
   //   Quantity: 0,
   // },
@@ -215,7 +215,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 350,
-  //     PrevPrice: 380,
+  //     //PrevPrice: 380,
   //   },
   //   Quantity: 0,
   // },
@@ -230,7 +230,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 330,
-  //     PrevPrice: 360,
+  //     //PrevPrice: 360,
   //   },
   //   Quantity: 0,
   // },
@@ -245,7 +245,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 500,
-  //     PrevPrice: 550,
+  //     //PrevPrice: 550,
   //   },
   //   Quantity: 0,
   // },
@@ -260,7 +260,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 590,
-  //     PrevPrice: 640,
+  //     //PrevPrice: 640,
   //   },
   //   Quantity: 0,
   // },
@@ -275,7 +275,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 570,
-  //     PrevPrice: 600,
+  //     //PrevPrice: 600,
   //   },
   //   Quantity: 0,
   // },
@@ -290,7 +290,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 850,
-  //     PrevPrice: 900,
+  //     //PrevPrice: 900,
   //   },
   //   Quantity: 0,
   // },
@@ -305,7 +305,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 780,
-  //     PrevPrice: 830,
+  //     //PrevPrice: 830,
   //   },
   //   Quantity: 0,
   // },
@@ -320,7 +320,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 90,
-  //     PrevPrice: 90,
+  //     //PrevPrice: 90,
   //   },
   //   Quantity: 0,
   // },
@@ -335,7 +335,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 130,
-  //     PrevPrice: 130,
+  //     //PrevPrice: 130,
   //   },
   //   Quantity: 0,
   // },
@@ -350,7 +350,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 120,
-  //     PrevPrice: 120,
+  //     //PrevPrice: 120,
   //   },
   //   Quantity: 0,
   // },
@@ -365,7 +365,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 150,
-  //     PrevPrice: 150,
+  //     //PrevPrice: 150,
   //   },
   //   Quantity: 0,
   // },
@@ -380,7 +380,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 110,
-  //     PrevPrice: 110,
+  //     //PrevPrice: 110,
   //   },
   //   Quantity: 0,
   // },
@@ -395,7 +395,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 80,
-  //     PrevPrice: 80,
+  //     //PrevPrice: 80,
   //   },
   //   Quantity: 0,
   // },
@@ -410,7 +410,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 160,
-  //     PrevPrice: 160,
+  //     //PrevPrice: 160,
   //   },
   //   Quantity: 0,
   // },
@@ -425,7 +425,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 80,
-  //     PrevPrice: 80,
+  //     //PrevPrice: 80,
   //   },
   //   Quantity: 0,
   // },
@@ -440,7 +440,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 160,
-  //     PrevPrice: 160,
+  //     //PrevPrice: 160,
   //   },
   //   Quantity: 0,
   // },
@@ -455,7 +455,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 110,
-  //     PrevPrice: 110,
+  //     //PrevPrice: 110,
   //   },
   //   Quantity: 0,
   // },
@@ -470,7 +470,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 130,
-  //     PrevPrice: 130,
+  //     //PrevPrice: 130,
   //   },
   //   Quantity: 0,
   // },
@@ -485,7 +485,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 180,
-  //     PrevPrice: 180,
+  //     //PrevPrice: 180,
   //   },
   //   Quantity: 0,
   // },
@@ -500,7 +500,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 60,
-  //     PrevPrice: 60,
+  //     //PrevPrice: 60,
   //   },
   //   Quantity: 0,
   // },
@@ -515,7 +515,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 230,
-  //     PrevPrice: 230,
+  //     //PrevPrice: 230,
   //   },
   //   Quantity: 0,
   // },
@@ -530,7 +530,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 200,
-  //     PrevPrice: 200,
+  //     //PrevPrice: 200,
   //   },
   //   Quantity: 0,
   // },
@@ -545,7 +545,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 160,
-  //     PrevPrice: 160,
+  //     //PrevPrice: 160,
   //   },
   //   Quantity: 0,
   // },
@@ -560,7 +560,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 130,
-  //     PrevPrice: 130,
+  //     //PrevPrice: 130,
   //   },
   //   Quantity: 0,
   // },
@@ -575,7 +575,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 100,
-  //     PrevPrice: 100,
+  //     //PrevPrice: 100,
   //   },
   //   Quantity: 0,
   // },
@@ -590,7 +590,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 35,
-  //     PrevPrice: 35,
+  //     //PrevPrice: 35,
   //   },
   //   Quantity: 0,
   // },
@@ -605,7 +605,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 85,
-  //     PrevPrice: 85,
+  //     //PrevPrice: 85,
   //   },
   //   Quantity: 0,
   // },
@@ -620,7 +620,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 105,
-  //     PrevPrice: 105,
+  //     //PrevPrice: 105,
   //   },
   //   Quantity: 0,
   // },
@@ -635,7 +635,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 115,
-  //     PrevPrice: 115,
+  //     //PrevPrice: 115,
   //   },
   //   Quantity: 0,
   // },
@@ -650,7 +650,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 90,
-  //     PrevPrice: 90,
+  //     //PrevPrice: 90,
   //   },
   //   Quantity: 0,
   // },
@@ -665,7 +665,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 95,
-  //     PrevPrice: 95,
+  //     //PrevPrice: 95,
   //   },
   //   Quantity: 0,
   // },
@@ -680,7 +680,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 159,
-  //     PrevPrice: 159,
+  //     //PrevPrice: 159,
   //   },
   //   Quantity: 0,
   // },
@@ -695,7 +695,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 298,
-  //     PrevPrice: 298,
+  //     //PrevPrice: 298,
   //   },
   //   Quantity: 0,
   // },
@@ -710,7 +710,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 288,
-  //     PrevPrice: 288,
+  //     //PrevPrice: 288,
   //   },
   //   Quantity: 0,
   // },
@@ -725,7 +725,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 288,
-  //     PrevPrice: 288,
+  //     //PrevPrice: 288,
   //   },
   //   Quantity: 0,
   // },
@@ -740,7 +740,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 298,
-  //     PrevPrice: 298,
+  //     //PrevPrice: 298,
   //   },
   //   Quantity: 0,
   // },
@@ -755,7 +755,7 @@ export const products: Product[] = [
   //   },
   //   Price: {
   //     CurrentPrice: 298,
-  //     PrevPrice: 298,
+  //     //PrevPrice: 298,
   //   },
   //   Quantity: 0,
   // },
@@ -771,7 +771,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 90,
-      PrevPrice: 90,
+      //PrevPrice: 90,
     },
     Quantity: 0,
   },
@@ -787,7 +787,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 130,
-      PrevPrice: 130,
+      //PrevPrice: 130,
     },
     Quantity: 0,
   },
@@ -802,7 +802,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 120,
-      PrevPrice: 120,
+      //PrevPrice: 120,
     },
     Quantity: 0,
   },
@@ -818,7 +818,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 150,
-      PrevPrice: 150,
+      //PrevPrice: 150,
     },
     Quantity: 0,
   },
@@ -833,7 +833,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 110,
-      PrevPrice: 110,
+      //PrevPrice: 110,
     },
     Quantity: 0,
   },
@@ -848,7 +848,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 80,
-      PrevPrice: 80,
+      //PrevPrice: 80,
     },
     Quantity: 0,
   },
@@ -863,7 +863,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 160,
-      PrevPrice: 160,
+      //PrevPrice: 160,
     },
     Quantity: 0,
   },
@@ -878,7 +878,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 80,
-      PrevPrice: 80,
+      //PrevPrice: 80,
     },
     Quantity: 0,
   },
@@ -894,7 +894,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 150,
-      PrevPrice: 150,
+      //PrevPrice: 150,
     },
     Quantity: 0,
   },
@@ -910,7 +910,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 110,
-      PrevPrice: 110,
+      //PrevPrice: 110,
     },
     Quantity: 0,
   },
@@ -925,7 +925,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 130,
-      PrevPrice: 130,
+      //PrevPrice: 130,
     },
     Quantity: 0,
   },
@@ -941,7 +941,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 180,
-      PrevPrice: 180,
+      //PrevPrice: 180,
     },
     Quantity: 0,
   },
@@ -957,7 +957,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 60,
-      PrevPrice: 60,
+      //PrevPrice: 60,
     },
     Quantity: 0,
   },
@@ -973,7 +973,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 230,
-      PrevPrice: 230,
+      //PrevPrice: 230,
     },
     Quantity: 0,
   },
@@ -989,7 +989,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 200,
-      PrevPrice: 200,
+      //PrevPrice: 200,
     },
     Quantity: 0,
   },
@@ -1004,7 +1004,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 160,
-      PrevPrice: 160,
+      //PrevPrice: 160,
     },
     Quantity: 0,
   },
@@ -1019,7 +1019,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 130,
-      PrevPrice: 130,
+      //PrevPrice: 130,
     },
     Quantity: 0,
   },
@@ -1035,7 +1035,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 100,
-      PrevPrice: 100,
+      //PrevPrice: 100,
     },
     Quantity: 0,
   },
@@ -1050,7 +1050,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 35,
-      PrevPrice: 35,
+      //PrevPrice: 35,
     },
     Quantity: 0,
   },
@@ -1065,7 +1065,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 85,
-      PrevPrice: 85,
+      //PrevPrice: 85,
     },
     Quantity: 0,
   },
@@ -1081,7 +1081,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 105,
-      PrevPrice: 105,
+      //PrevPrice: 105,
     },
     Quantity: 0,
   },
@@ -1096,7 +1096,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 115,
-      PrevPrice: 115,
+      //PrevPrice: 115,
     },
     Quantity: 0,
   },
@@ -1111,7 +1111,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 90,
-      PrevPrice: 90,
+      //PrevPrice: 90,
     },
     Quantity: 0,
   },
@@ -1126,7 +1126,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 95,
-      PrevPrice: 95,
+      //PrevPrice: 95,
     },
     Quantity: 0,
   },
@@ -1141,7 +1141,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 159,
-      PrevPrice: 159,
+      //PrevPrice: 159,
     },
     Quantity: 0,
   },
@@ -1156,7 +1156,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 298,
-      PrevPrice: 298,
+      //PrevPrice: 298,
     },
     Quantity: 0,
   },
@@ -1171,7 +1171,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 288,
-      PrevPrice: 288,
+      //PrevPrice: 288,
     },
     Quantity: 0,
   },
@@ -1186,7 +1186,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 288,
-      PrevPrice: 288,
+      //PrevPrice: 288,
     },
     Quantity: 0,
   },
@@ -1201,7 +1201,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 298,
-      PrevPrice: 298,
+      //PrevPrice: 298,
     },
     Quantity: 0,
   },
@@ -1216,7 +1216,7 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 315,
-      PrevPrice: 315,
+      //PrevPrice: 315,
     },
     Quantity: 0,
   },

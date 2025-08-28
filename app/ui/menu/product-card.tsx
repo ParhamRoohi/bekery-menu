@@ -7,7 +7,7 @@ type ProductCardProps = {
   id: number;
   title: string;
   curPrice: number;
-  prevPrice: number;
+  prevPrice?: number;
   image: string;
   description?: string;
 };
@@ -66,7 +66,7 @@ export default function ProductCard({
         <div className="flex flex-row justify-between items-sart w-full">
           <div className="flex flex-col items-start gap-1">
             <span className="text-orange-300 text-xs font-normal line-through">
-              {prevPrice.toLocaleString("fa-IR")}
+              {/* {prevPrice.toLocaleString("fa-IR")} */}
             </span>
             <span className="text-stone-600 text-xs font-bold ">
               {curPrice.toLocaleString("fa-IR")}
