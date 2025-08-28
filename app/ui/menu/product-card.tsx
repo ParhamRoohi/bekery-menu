@@ -16,7 +16,7 @@ export default function ProductCard({
   id,
   title,
   curPrice,
-  prevPrice,
+  // prevPrice,
   image,
   description,
 }: ProductCardProps) {
