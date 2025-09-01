@@ -455,7 +455,7 @@ export const products: Product[] = [
   {
     ProductID: 30,
     Title: "چاپاتا مرغ تندوری",
-    ProductImage: "../../public/images/double-chocolate-cookie.png",
+    ProductImage: "../../public/images/tandoori-chicken-chapata.png",
     Description: "چاپاتای پر شده با مرغ تندری، کاهو، گوجه و سس مایو",
     Category: {
       CategoryFA: "صبحانه و میان وعده",
