@@ -323,7 +323,7 @@ export const products: Product[] = [
     ProductImage: "../../public/images/cinamon-rolle.png",
     Description: "رول نرم و شیرین پر شده با دارچین و شکر",
     Category: {
-      CategoryFA: "پیستری",
+      CategoryFA: "لایه ای",
       CategoryEN: "Pastry",
     },
     Price: {
@@ -338,7 +338,7 @@ export const products: Product[] = [
     ProductImage: "../../public/images/nutella.png",
     Description: "رول خمیری پر شده با نوتلا و فندق خرد شده",
     Category: {
-      CategoryFA: "پیستری",
+      CategoryFA: "لایه ای",
       CategoryEN: "Pastry",
     },
     Price: {
@@ -402,7 +402,7 @@ export const products: Product[] = [
       CategoryEN: "Breakfast and snacks",
     },
     Price: {
-      CurrentPrice: 298,
+      CurrentPrice: 398,
       //PrevPrice: 298,
     },
     Quantity: 0,
@@ -417,7 +417,7 @@ export const products: Product[] = [
       CategoryEN: "Breakfast and snacks",
     },
     Price: {
-      CurrentPrice: 288,
+      CurrentPrice: 388,
       //PrevPrice: 288,
     },
     Quantity: 0,
@@ -432,7 +432,7 @@ export const products: Product[] = [
       CategoryEN: "Breakfast and snacks",
     },
     Price: {
-      CurrentPrice: 288,
+      CurrentPrice: 388,
       //PrevPrice: 288,
     },
     Quantity: 0,
@@ -447,7 +447,7 @@ export const products: Product[] = [
       CategoryEN: "Breakfast and snacks",
     },
     Price: {
-      CurrentPrice: 298,
+      CurrentPrice: 398,
       //PrevPrice: 298,
     },
     Quantity: 0,
@@ -462,7 +462,7 @@ export const products: Product[] = [
       CategoryEN: "Breakfast and snacks",
     },
     Price: {
-      CurrentPrice: 315,
+      CurrentPrice: 398,
       //PrevPrice: 315,
     },
     Quantity: 0,
@@ -615,6 +615,171 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 50,
+      //PrevPrice: 315,
+    },
+    Quantity: 0,
+  },
+  {
+    ProductID: 41,
+    Title: "کروسان",
+    ProductImage: "",
+    Description: "",
+    Category: {
+      CategoryFA: "لایه ای",
+      CategoryEN: "Pastry",
+    },
+    Price: {
+      CurrentPrice: 119,
+      //PrevPrice: 115,
+    },
+    Quantity: 0,
+  },
+  {
+    ProductID: 42,
+    Title: "کروسان شکلات",
+    ProductImage: "",
+    Description: "",
+    Category: {
+      CategoryFA: "لایه ای",
+      CategoryEN: "Pastry",
+    },
+    Price: {
+      CurrentPrice: 285,
+      //PrevPrice: 115,
+    },
+    Quantity: 0,
+  },
+  {
+    ProductID: 43,
+    Title: "کروسان پسته",
+    ProductImage: "",
+    Description: "",
+    Category: {
+      CategoryFA: "لایه ای",
+      CategoryEN: "Pastry",
+    },
+    Price: {
+      CurrentPrice: 188,
+      //PrevPrice: 115,
+    },
+    Quantity: 0,
+  },
+  {
+    ProductID: 44,
+    Title: "کروسان لوتوس",
+    ProductImage: "",
+    Description: "",
+    Category: {
+      CategoryFA: "لایه ای",
+      CategoryEN: "Pastry",
+    },
+    Price: {
+      CurrentPrice: 175,
+      //PrevPrice: 115,
+    },
+    Quantity: 0,
+  },
+  {
+    ProductID: 45,
+    Title: "چاکلت توییست",
+    ProductImage: "",
+    Description: "",
+    Category: {
+      CategoryFA: "لایه ای",
+      CategoryEN: "Pastry",
+    },
+    Price: {
+      CurrentPrice: 138,
+      //PrevPrice: 115,
+    },
+    Quantity: 0,
+  },
+  {
+    ProductID: 46,
+    Title: "چاکلت پن",
+    ProductImage: "",
+    Description: "",
+    Category: {
+      CategoryFA: "لایه ای",
+      CategoryEN: "Pastry",
+    },
+    Price: {
+      CurrentPrice: 288,
+      //PrevPrice: 115,
+    },
+    Quantity: 0,
+  },
+  {
+    ProductID: 47,
+    Title: " رول نیویورکی شکلاتی",
+    ProductImage: "",
+    Description: "",
+    Category: {
+      CategoryFA: "لایه ای",
+      CategoryEN: "Pastry",
+    },
+    Price: {
+      CurrentPrice: 287,
+      //PrevPrice: 115,
+    },
+    Quantity: 0,
+  },
+  {
+    ProductID: 48,
+    Title: " رول نیویورکی پسته",
+    ProductImage: "",
+    Description: "",
+    Category: {
+      CategoryFA: "لایه ای",
+      CategoryEN: "Pastry",
+    },
+    Price: {
+      CurrentPrice: 198,
+      //PrevPrice: 115,
+    },
+    Quantity: 0,
+  },
+  {
+    ProductID: 49,
+    Title: "کروسان دیپ پیازچه و گردو",
+    ProductImage: "",
+    Description: "",
+    Category: {
+      CategoryFA: "صبحانه و میان وعده",
+      CategoryEN: "Breakfast and snacks",
+    },
+    Price: {
+      CurrentPrice: 188,
+      //PrevPrice: 315,
+    },
+    Quantity: 0,
+  },
+  {
+    ProductID: 50,
+    Title: "کروسان بوقلمون",
+    ProductImage: "",
+    Description: "",
+    Category: {
+      CategoryFA: "صبحانه و میان وعده",
+      CategoryEN: "Breakfast and snacks",
+    },
+    Price: {
+      CurrentPrice: 318,
+      //PrevPrice: 315,
+    },
+    Quantity: 0,
+  },
+  {
+    ProductID: 51,
+    Title: "کروسان بیکن",
+    ProductImage: "",
+    Description: "",
+    Category: {
+      CategoryFA: "صبحانه و میان وعده",
+      CategoryEN: "Breakfast and snacks",
+    },
+    Price: {
+      CurrentPrice: 313,
       //PrevPrice: 315,
     },
     Quantity: 0,
