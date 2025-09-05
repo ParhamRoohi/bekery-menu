@@ -494,7 +494,7 @@ export const products: Product[] = [
       CategoryEN: "Cookies and cakes",
     },
     Price: {
-      CurrentPrice: 100,
+      CurrentPrice: 128,
       //PrevPrice: 95,
     },
     Quantity: 0,
@@ -622,7 +622,7 @@ export const products: Product[] = [
   {
     ProductID: 41,
     Title: "کروسان",
-    ProductImage: "",
+    ProductImage: "../../public/images/Croissant.png",
     Description: "",
     Category: {
       CategoryFA: "لایه ای",
@@ -637,7 +637,7 @@ export const products: Product[] = [
   {
     ProductID: 42,
     Title: "کروسان شکلات",
-    ProductImage: "",
+    ProductImage: "../../public/images/Chocolate-croissant.png",
     Description: "",
     Category: {
       CategoryFA: "لایه ای",
@@ -652,7 +652,7 @@ export const products: Product[] = [
   {
     ProductID: 43,
     Title: "کروسان پسته",
-    ProductImage: "",
+    ProductImage: "../../public/images/Pistachio-croissant.png",
     Description: "",
     Category: {
       CategoryFA: "لایه ای",
@@ -667,7 +667,7 @@ export const products: Product[] = [
   {
     ProductID: 44,
     Title: "کروسان لوتوس",
-    ProductImage: "",
+    ProductImage: "../../public/images/Lotus-croissant.png",
     Description: "",
     Category: {
       CategoryFA: "لایه ای",
@@ -682,7 +682,7 @@ export const products: Product[] = [
   {
     ProductID: 45,
     Title: "چاکلت توییست",
-    ProductImage: "",
+    ProductImage: "../../public/images/Chocolate-twist.png",
     Description: "",
     Category: {
       CategoryFA: "لایه ای",
@@ -697,7 +697,7 @@ export const products: Product[] = [
   {
     ProductID: 46,
     Title: "چاکلت پن",
-    ProductImage: "",
+    ProductImage: "../../public/images/Chocolate-pan.png",
     Description: "",
     Category: {
       CategoryFA: "لایه ای",
@@ -711,8 +711,8 @@ export const products: Product[] = [
   },
   {
     ProductID: 47,
-    Title: " رول نیویورکی شکلاتی",
-    ProductImage: "",
+    Title: "رول نیویورکی شکلاتی",
+    ProductImage: "../../public/images/Chocolate-new-york-oll.png",
     Description: "",
     Category: {
       CategoryFA: "لایه ای",
@@ -726,8 +726,8 @@ export const products: Product[] = [
   },
   {
     ProductID: 48,
-    Title: " رول نیویورکی پسته",
-    ProductImage: "",
+    Title: "رول نیویورکی پسته",
+    ProductImage: "../../public/images/New-York-pistachio-roll.png",
     Description: "",
     Category: {
       CategoryFA: "لایه ای",
@@ -742,7 +742,7 @@ export const products: Product[] = [
   {
     ProductID: 49,
     Title: "کروسان دیپ پیازچه و گردو",
-    ProductImage: "",
+    ProductImage: "../../public/images/croissant-dip-spring-onion.png",
     Description: "",
     Category: {
       CategoryFA: "صبحانه و میان وعده",
@@ -757,7 +757,7 @@ export const products: Product[] = [
   {
     ProductID: 50,
     Title: "کروسان بوقلمون",
-    ProductImage: "",
+    ProductImage: "../../public/images/Turkey-croissant.png",
     Description: "",
     Category: {
       CategoryFA: "صبحانه و میان وعده",
@@ -772,7 +772,7 @@ export const products: Product[] = [
   {
     ProductID: 51,
     Title: "کروسان بیکن",
-    ProductImage: "",
+    ProductImage: "../../public/images/Bacon-croissant.png",
     Description: "",
     Category: {
       CategoryFA: "صبحانه و میان وعده",
@@ -780,6 +780,21 @@ export const products: Product[] = [
     },
     Price: {
       CurrentPrice: 313,
+      //PrevPrice: 315,
+    },
+    Quantity: 0,
+  },
+  {
+    ProductID: 52,
+    Title: "گاتا گردویی",
+    ProductImage: "../../public/images/Walnut-gata.png",
+    Description: "",
+    Category: {
+      CategoryFA: "لایه ای",
+      CategoryEN: "Breakfast and snacks",
+    },
+    Price: {
+      CurrentPrice: 188,
       //PrevPrice: 315,
     },
     Quantity: 0,
