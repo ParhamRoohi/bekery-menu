@@ -799,4 +799,94 @@ export const products: Product[] = [
     },
     Quantity: 0,
   },
+  {
+    ProductID: 53,
+    Title: "مافین تخم مرغ + آمریکانو",
+    ProductImage: "../../public/images/egg + coffee.png",
+    Description: "",
+    Category: {
+      CategoryFA: "کمبو",
+      CategoryEN: "Combo",
+    },
+    Price: {
+      CurrentPrice: 170,
+      //PrevPrice: 315,
+    },
+    Quantity: 0,
+  },
+  {
+    ProductID: 54,
+    Title: "مافین بوقلمون + آمریکانو",
+    ProductImage: "../../public/images/turkey + coffee.png",
+    Description: "",
+    Category: {
+      CategoryFA: "کمبو",
+      CategoryEN: "Combo",
+    },
+    Price: {
+      CurrentPrice: 187,
+      //PrevPrice: 315,
+    },
+    Quantity: 0,
+  },
+  {
+    ProductID: 55,
+    Title: "مافین بیکن + آمریکانو",
+    ProductImage: "../../public/images/becon + coffee.png",
+    Description: "",
+    Category: {
+      CategoryFA: "کمبو",
+      CategoryEN: "Combo",
+    },
+    Price: {
+      CurrentPrice: 191,
+      //PrevPrice: 315,
+    },
+    Quantity: 0,
+  },
+  {
+    ProductID: 56,
+    Title: "مافین تخم مرغ + رگولار",
+    ProductImage: "../../public/images/egg + coffee.png",
+    Description: "",
+    Category: {
+      CategoryFA: "کمبو",
+      CategoryEN: "Combo",
+    },
+    Price: {
+      CurrentPrice: 145,
+      //PrevPrice: 315,
+    },
+    Quantity: 0,
+  },
+  {
+    ProductID: 57,
+    Title: "مافین بوقلمون + رگولار",
+    ProductImage: "../../public/images/turkey + coffee.png",
+    Description: "",
+    Category: {
+      CategoryFA: "کمبو",
+      CategoryEN: "Combo",
+    },
+    Price: {
+      CurrentPrice: 161,
+      //PrevPrice: 315,
+    },
+    Quantity: 0,
+  },
+  {
+    ProductID: 58,
+    Title: "مافین بیکن + رگولار",
+    ProductImage: "../../public/images/becon + coffee.png",
+    Description: "",
+    Category: {
+      CategoryFA: "کمبو",
+      CategoryEN: "Combo",
+    },
+    Price: {
+      CurrentPrice: 165,
+      //PrevPrice: 315,
+    },
+    Quantity: 0,
+  },
 ];
