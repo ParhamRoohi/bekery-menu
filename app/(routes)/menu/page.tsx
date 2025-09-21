@@ -67,7 +67,6 @@ function MenuSkeleton() {
 export default function MenuPage() {
   return (
     <Suspense fallback={<MenuSkeleton />}>
-      {/* @ts-expect-error Async Server Component */}
       <MenuContent />
     </Suspense>
   );
