@@ -18,6 +18,7 @@ const CATEGORY_ORDER = [
   "تاپینگ",
 ];
 
+// comment
 function getSanityImageUrl(ref: string) {
   if (!ref || typeof ref !== "string" || !ref.startsWith("image-")) {
     return "/images/placeholder.png";
