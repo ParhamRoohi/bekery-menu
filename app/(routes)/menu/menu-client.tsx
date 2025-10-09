@@ -99,6 +99,7 @@ export default function MenuClient({ products }: MenuClientProps) {
   const handleCategoryClick = (category: string) => {
     setActiveCategory(category);
     const section = sectionRefs.current[category];
+
     if (!section) return;
 
     const headerHeight = stickyHeaderRef.current?.offsetHeight ?? 0;
