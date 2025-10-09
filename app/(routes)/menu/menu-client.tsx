@@ -19,7 +19,7 @@ const CATEGORY_ORDER = [
   "موکتل",
   "اسموتی",
   "میلک شیک",
-  "گمبو",
+  "کمبو",
 ];
 
 function getSanityImageUrl(ref: string) {
