@@ -22,7 +22,6 @@ const CATEGORY_ORDER = [
   "گمبو",
 ];
 
-// comment
 function getSanityImageUrl(ref: string) {
   if (!ref || typeof ref !== "string" || !ref.startsWith("image-")) {
     return "/images/placeholder.png";
