@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { vazirmatn, FrederickatheGreat } from "./font";
 import { CartProvider } from "../app/context/cart-context";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Crust",
@@ -15,6 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" style={{ direction: "rtl" }}>
+      <Analytics />
       <body
         className={`${vazirmatn.variable} ${FrederickatheGreat.variable} antialiased`}
       >
