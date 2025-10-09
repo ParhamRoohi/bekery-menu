@@ -8,8 +8,8 @@ import { useCart } from "../../context/cart-context";
 import { Product } from "./types";
 
 const CATEGORY_ORDER = [
-  "نان های لایه ای",
   "نان",
+  "نان های لایه ای",
   "صبحانه و میان وعده",
   "کیک و کوکی",
   "نوشیدنی گرم",
