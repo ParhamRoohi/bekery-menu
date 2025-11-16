@@ -46,12 +46,18 @@ export default function MenuClient({ products }: MenuClientProps) {
   const stickyHeaderRef = useRef<HTMLDivElement | null>(null);
 
   const groupedProducts = useMemo(() => {
-    return products.reduce((acc, product) => {
+    const groups = products.reduce((acc, product) => {
       const category = product.category.categoryFA.trim();
       if (!acc[category]) acc[category] = [];
       acc[category].push(product);
       return acc;
     }, {} as Record<string, Product[]>);
+
+    for (const category in groups) {
+      groups[category].sort((a, b) => a.title.localeCompare(b.title, "fa"));
+    }
+
+    return groups;
   }, [products]);
 
   const categories = useMemo(() => {
@@ -175,7 +181,7 @@ export default function MenuClient({ products }: MenuClientProps) {
           <div className="flex flex-col gap-3">
             {groupedProducts[category].map((product) => (
               <ProductCard
-                key={product.productId}
+                key={`${product.productId}-${product.title}`}
                 id={product.productId}
                 title={product.title}
                 curPrice={product.price.currentPrice}
