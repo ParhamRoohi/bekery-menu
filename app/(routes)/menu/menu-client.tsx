@@ -22,6 +22,19 @@ const CATEGORY_ORDER = [
   "کمبو",
 ];
 
+const BASE_PRODUCT_NAMES = [
+  "Chocolate Twist",
+  "New York Roll",
+  "Croissant",
+  "Croffin",
+  "Simit",
+  "Gata",
+  "Pan",
+  "Chapata",
+  "Muffin",
+  "breakfast",
+];
+
 function getSanityImageUrl(ref: string) {
   if (!ref || typeof ref !== "string" || !ref.startsWith("image-")) {
     return "/images/placeholder.png";
@@ -54,7 +67,26 @@ export default function MenuClient({ products }: MenuClientProps) {
     }, {} as Record<string, Product[]>);
 
     for (const category in groups) {
-      groups[category].sort((a, b) => a.title.localeCompare(b.title, "fa"));
+      groups[category].sort((a, b) => {
+        const getSortKey = (title: string) => {
+          const lowerTitle = title.toLowerCase();
+          const base = BASE_PRODUCT_NAMES.find((b) =>
+            lowerTitle.includes(b.toLowerCase())
+          );
+
+          if (base) {
+            const modifier = title.replace(new RegExp(base, "i"), "").trim();
+            return `${base} ${modifier}`;
+          }
+
+          return title;
+        };
+
+        const sortKeyA = getSortKey(a.title);
+        const sortKeyB = getSortKey(b.title);
+
+        return sortKeyA.localeCompare(sortKeyB, "fa");
+      });
     }
 
     return groups;
