@@ -14,4 +14,5 @@ export interface Product {
   price: {
     currentPrice: number;
   };
+  isEnabled: boolean;
 }

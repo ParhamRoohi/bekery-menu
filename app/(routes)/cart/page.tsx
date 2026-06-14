@@ -10,10 +10,13 @@ type CartItem = { id: number; title: string; price: number; quantity: number };
 
 export default function Page() {
   const { cart, updateCartItem } = useCart();
+  
+  // Calculate total cart price
+  const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
   return (
     <>
-      <section className="h-screen bg-[#F9F3F4] ">
+      <section className="h-screen bg-[#efd19d] ">
         <Image
           priority={true}
           src={img}
@@ -23,13 +26,13 @@ export default function Page() {
           className="h-48 w-full object-cover"
         />
 
-        <main className="mt-10 h-full">
+        <main className="mt-10 h-full flex flex-col">
           <div className="flex flex-row items-center justify-between px-6">
             <div className="flex items-center gap-2">
               <span className="text-stone-600 text-xl font-[450] flex flex-row justify-center gap-1 items-center">
                 یادداشت ها
                 {cart.length > 0 && (
-                  <span className="text-stone-600 text-base font-normal w-5 h-5 flex items-center justify-center">
+                  <span className="text-bb5327 text-base font-normal w-5 h-5 flex items-center justify-center">
                     ({cart.length.toLocaleString("fa-IR")})
                   </span>
                 )}
@@ -51,7 +54,7 @@ export default function Page() {
             </Link>
           </div>
 
-          <section className="flex flex-col gap-4 p-5 h-full overflow-auto">
+          <section className="flex flex-col gap-4 p-5 flex-1 overflow-auto">
             {cart.map((item) => (
               <CartItem
                 key={item.id}
@@ -62,7 +65,20 @@ export default function Page() {
                 updateCartItem={updateCartItem}
               />
             ))}
+            
+            {/* Total price section - added at the end of the list */}
+            {cart.length > 0 && (
+              <>
+                <div className="border-t border-stone-400 my-4"></div>
+                <div className="flex flex-row justify-between items-center">
+                  <span className="text-[#086159] text-lg font-bold">
+                    {totalPrice.toLocaleString("fa-IR")} هزار تومان
+                  </span>
+                </div>
+              </>
+            )}
           </section>
+          
         </main>
       </section>
     </>

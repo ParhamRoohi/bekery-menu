@@ -16,7 +16,7 @@ export default function Page() {
   }, [router]);
 
   return (
-    <main className=" relative bg-[#F9F3F4] h-screen">
+    <main className=" relative bg-[#eed09d] h-screen">
       <section className="pt-30">
         <div className="flex justify-center flex-col items-center gap-6">
           <Image
@@ -25,6 +25,7 @@ export default function Page() {
             height={100}
             alt="splash screen"
             className="w-full"
+            
           />
         </div>
       </section>

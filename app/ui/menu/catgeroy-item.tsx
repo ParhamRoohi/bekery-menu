@@ -10,7 +10,7 @@ export default function CategoryItem({
   onClick,
   ...props
 }: CategoryItemProps & React.HTMLAttributes<HTMLLIElement>) {
-  const activeClasses = isActive ? "bg-[#49101a] text-white" : "text-[#49101a]";
+  const activeClasses = isActive ? "bg-[#bb5327] text-white " : "text-[#065b52]";
 
   return (
     <li {...props} onClick={onClick} className="cursor-pointer">

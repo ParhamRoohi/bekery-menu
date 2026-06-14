@@ -48,7 +48,7 @@ export default function ProductCard({
   };
 
   return (
-    <article className="flex flex-row gap-3 p-2.5 rounded-2xl outline-[1px] bg-white outline-[#DAD2C9]">
+    <article className="flex flex-row gap-3 p-2.5 rounded-2xl outline-[1px] bg-[#f6dfb7] outline-[#DAD2C9]">
       <Image
         src={image.replace("../../public", "")}
         width={100}
@@ -58,8 +58,8 @@ export default function ProductCard({
       />
       <div className="flex flex-col justify-between w-full">
         <div className="flex flex-col gap-1 items-start">
-          <span className="text-zinc-800 text-base font-bold">{title}</span>
-          <span className="text-zinc-800 text-xs font-normal">
+          <span className="text-[#065b52] text-base font-bold">{title}</span>
+          <span className=" text-[#065b52] text-xs font-normal">
             {description}
           </span>
         </div>
@@ -68,7 +68,7 @@ export default function ProductCard({
             <span className="text-orange-300 text-xs font-normal line-through">
               {/* {prevPrice.toLocaleString("fa-IR")} */}
             </span>
-            <span className="text-stone-600 text-xs font-bold ">
+            <span className="text-[#065b52] text-xs font-bold ">
               {curPrice.toLocaleString("fa-IR")}
               <span className="px-0.5">هزار تومان</span>
             </span>
@@ -87,7 +87,7 @@ export default function ProductCard({
                     <path d="M5 13.5V11.5H19V13.5H5Z" fill="#795D4C" />
                   </svg>
                 </button>
-                <span className="flex item-center justify-center pt-1">
+                <span className=" flex item-center justify-center pt-1">
                   {productQuantity.toLocaleString("fa-IR")}
                 </span>
                 <button onClick={handleIncrease}>
@@ -110,7 +110,7 @@ export default function ProductCard({
                 onClick={() => {
                   handleIncrease();
                 }}
-                className="bg-[#49101a] text-white px-2 py-1 rounded-lg flex flex-row gap-1.5 items-center text-sm font-normal"
+                className="bg-[#bb5327] text-white px-2 py-1 rounded-lg flex flex-row gap-1.5 items-center text-sm font-bold"
               >
                 افزودن
                 <svg
