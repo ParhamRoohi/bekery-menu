@@ -155,7 +155,7 @@ export default function MenuClient({ products }: MenuClientProps) {
     <section className="relative pb-20">
       <div
         ref={stickyHeaderRef}
-        className="sticky top-0 bg-[#efd19d] z-10 shadow-sm"
+        className="sticky top-0 bg-[#f6e7ce] z-10 shadow-sm"
       >
         <div className="relative flex flex-row items-center justify-center mx-auto w-full py-10">
           <Image

@@ -16,7 +16,7 @@ export default function Page() {
 
   return (
     <>
-      <section className="h-screen bg-[#efd19d] ">
+      <section className="h-screen bg-[#f6e7ce] ">
         <Image
           priority={true}
           src={img}

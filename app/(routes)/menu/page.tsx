@@ -15,7 +15,7 @@ function MenuSkeleton() {
 
   return (
     <section className="relative pb-20">
-      <div className="sticky top-0 bg-[#efd19d] z-10 shadow-sm">
+      <div className="sticky top-0 bg-[#f6e7ce] z-10 shadow-sm">
         <div className="relative flex flex-row items-center justify-center mx-auto w-full py-10">
           <div className="w-32 h-12 rounded-2xl bg-[#f6dfb7] animate-pulse" />
           <div className="absolute left-6">

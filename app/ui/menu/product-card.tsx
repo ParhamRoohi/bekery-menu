@@ -48,7 +48,7 @@ export default function ProductCard({
   };
 
   return (
-    <article className="flex flex-row gap-3 p-2.5 rounded-2xl outline-[1px] bg-[#f6dfb7] outline-[#DAD2C9]">
+    <article className="flex flex-row gap-3 p-2.5 rounded-2xl outline-[1px] bg-[#f9ebcf] outline-[#DAD2C9]">
       <Image
         src={image.replace("../../public", "")}
         width={100}
