@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import CartItem from "../../ui/cart/cart-item";
-import img from "../../../public/images/cart-bg.png";
 import { useCart } from "../../context/cart-context";
 
 import Link from "next/link";
@@ -17,15 +16,16 @@ export default function Page() {
   return (
     <>
       <section className="h-screen bg-[#f6e7ce] ">
-        <Image
-          priority={true}
-          src={img}
+     <Image
+          src="/images/پترن.svg"
           width={1000}
           height={1000}
-          alt="image"
+          alt="background pattern"
+          style={{
+            clipPath: "ellipse(150% 100% at 50% 0%)",
+          }}
           className="h-48 w-full object-cover"
         />
-
         <main className="mt-10 h-full flex flex-col">
           <div className="flex flex-row items-center justify-between px-6">
             <div className="flex items-center gap-2">

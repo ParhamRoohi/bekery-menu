@@ -1,5 +1,4 @@
 "use client";
-import img from "../public/images/splashScreen.webp";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
@@ -30,12 +29,14 @@ export default function Page() {
         </div>
       </section>
       <Image
-        src={img}
-        height={400}
-        width={400}
-        alt="Footer image in the splash screen"
-        className="absolute bottom-0 left-0 mt-9 w-full"
-        priority={true}
+        src="/images/پترن.svg"
+        width={1000}
+        height={1000}
+        alt="background pattern"
+        style={{
+          clipPath: "ellipse(150% 100% at 50% 0%)",
+        }}
+        className="absolute bottom-0 left-0 w-full h-96 object-cover"
       />
     </main>
   );
