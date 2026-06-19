@@ -8,18 +8,20 @@ import { useCart } from "../../context/cart-context";
 import { Product } from "./types";
 
 const CATEGORY_ORDER = [
-  "نان",
-  "نان های لایه ای",
-  "صبحانه و میان وعده",
-  "کیک و کوکی",
+  "نوشیدنی گرم بر پایه قهوه",
+  "نوشیدنی سرد بر پایه قهوه",
   "نوشیدنی گرم",
-  "نوشیدنی سرد",
   "چای و دمنوش",
   "ماچا",
+  "شیک",
   "موکتل",
   "اسموتی",
-  "میلک شیک",
-  "کمبو",
+  "کیک و دسر",
+  "لایه ای",
+  "کوکی",
+  // "نان",
+  // "صبحانه و میان وعده",
+  // "کمبو",
 ];
 
 const BASE_PRODUCT_NAMES = [
@@ -33,6 +35,7 @@ const BASE_PRODUCT_NAMES = [
   "Chapata",
   "Muffin",
   "breakfast",
+  "Three Milk Cake",
 ];
 
 function getSanityImageUrl(ref: string) {
@@ -59,19 +62,22 @@ export default function MenuClient({ products }: MenuClientProps) {
   const stickyHeaderRef = useRef<HTMLDivElement | null>(null);
 
   const groupedProducts = useMemo(() => {
-    const groups = products.reduce((acc, product) => {
-      const category = product.category.categoryFA.trim();
-      if (!acc[category]) acc[category] = [];
-      acc[category].push(product);
-      return acc;
-    }, {} as Record<string, Product[]>);
+    const groups = products.reduce(
+      (acc, product) => {
+        const category = product.category.categoryFA.trim();
+        if (!acc[category]) acc[category] = [];
+        acc[category].push(product);
+        return acc;
+      },
+      {} as Record<string, Product[]>,
+    );
 
     for (const category in groups) {
       groups[category].sort((a, b) => {
         const getSortKey = (title: string) => {
           const lowerTitle = title.toLowerCase();
           const base = BASE_PRODUCT_NAMES.find((b) =>
-            lowerTitle.includes(b.toLowerCase())
+            lowerTitle.includes(b.toLowerCase()),
           );
 
           if (base) {
@@ -123,7 +129,7 @@ export default function MenuClient({ products }: MenuClientProps) {
           }
         });
       },
-      { threshold: [0.3], rootMargin: "-50px 0px 0px 0px" }
+      { threshold: [0.3], rootMargin: "-50px 0px 0px 0px" },
     );
 
     Object.values(sectionRefs.current).forEach((section) => {
@@ -148,7 +154,7 @@ export default function MenuClient({ products }: MenuClientProps) {
 
   const totalCartQuantity = cart.reduce(
     (total, item) => total + item.quantity,
-    0
+    0,
   );
 
   return (
@@ -217,7 +223,7 @@ export default function MenuClient({ products }: MenuClientProps) {
                 id={product.productId}
                 title={product.title}
                 curPrice={product.price.currentPrice}
-                image={getSanityImageUrl(product.productImage.asset._ref)}
+                image={getSanityImageUrl(product.productImage?.asset?._ref)}
                 description={product.description}
               />
             ))}
