@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { useCart } from "../../context/cart-context";
 
 type ProductCardProps = {
@@ -23,7 +23,13 @@ export default function ProductCard({
   const { cart, updateCartItem } = useCart();
 
   const cartItem = cart.find((item) => item.id === id);
+     const [imgSrc, setImgSrc] = useState(image);
+
   const productQuantity = cartItem ? cartItem.quantity : 0;
+
+  const handleError = () => {
+    setImgSrc("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+  };
 
   const handleIncrease = () => {
     const newQuantity = productQuantity + 1;
@@ -50,11 +56,12 @@ export default function ProductCard({
   return (
     <article className="flex flex-row gap-3 p-2.5 rounded-2xl outline-[1px] bg-[#f9ebcf] outline-[#DAD2C9]">
       <Image
-        src={image.replace("../../public", "")}
+       src={imgSrc.replace("../../public", "")}
         width={100}
         height={100}
         alt="product image"
         className="rounded-[10px] h-26 w-26 object-cover"
+         onError={handleError}
       />
       <div className="flex flex-col justify-between w-full">
         <div className="flex flex-col gap-1 items-start">
