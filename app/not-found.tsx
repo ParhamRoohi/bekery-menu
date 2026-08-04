@@ -19,18 +19,10 @@ export default function NotFound() {
 
           <button
             onClick={() => router.push("/menu/productlist")}
-            className="mt-4 px-8 py-4 bg-[#cd4444] hover:bg-[#b33c3c] text-white rounded-2xl text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            className="px-8 py-4 bg-[#cd4444] hover:bg-[#b33c3c] text-white rounded-2xl text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
             بازگشت به منو
           </button>
-
-          <Image
-            src={"/images/splashscreen-image.svg"}
-            width={150}
-            height={150}
-            alt="bakery logo"
-            className="w-1/2 mx-auto mt-8 opacity-70"
-          />
         </div>
       </section>
 
@@ -42,7 +34,7 @@ export default function NotFound() {
         style={{
           clipPath: "ellipse(150% 100% at 50% 0%)",
         }}
-        className="absolute bottom-0 left-0 w-full h-96 object-cover"
+        className="absolute -bottom-20 left-0 w-full h-96 object-cover"
       />
     </main>
   );
