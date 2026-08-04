@@ -1,73 +1,42 @@
-import { Suspense } from "react";
-import MenuClient from "./menu-client";
-import { fetchMenuProducts } from "./data/fetch-menu-products";
-import { Product } from "./types";
+"use client";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
-async function MenuContent() {
-  const products: Product[] = await fetchMenuProducts();
-  return <MenuClient products={products} />;
-}
+export default function Page() {
+  const router = useRouter();
 
-function MenuSkeleton() {
-  const categoryPlaceholders = Array.from({ length: 6 });
-  const sectionPlaceholders = Array.from({ length: 4 });
-  const productPlaceholders = Array.from({ length: 3 });
+  useEffect(() => {
+    const redirectTimer = setTimeout(() => {
+      router.push("/menu/productlist");
+    }, 1500);
+
+    return () => clearTimeout(redirectTimer);
+  }, [router]);
 
   return (
-    <section className="relative pb-20">
-      <div className="sticky top-0 bg-[#f6e7ce] z-10 shadow-sm">
-        <div className="relative flex flex-row items-center justify-center mx-auto w-full py-10">
-          <div className="w-32 h-12 rounded-2xl bg-[#f6dfb7] animate-pulse" />
-          <div className="absolute left-6">
-            <div className="w-7 h-8 rounded-full bg-[#f6dfb7] animate-pulse" />
-            <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#cd4444] animate-pulse" />
-          </div>
+    <main className=" relative bg-[#f6e7ce] h-screen">
+      <section className="pt-30">
+        <div className="flex justify-center flex-col items-center gap-6 ">
+          <Image
+            src={"/images/splashscreen-image.svg"}
+            width={100}
+            height={100}
+            alt="splash screen"
+            className="w-1/2 mx-auto"
+          />
         </div>
-          <div className="px-4 pb-4">
-            <div className="flex gap-3 overflow-hidden">
-              {categoryPlaceholders.map((_, index) => (
-                <div
-                  key={`category-skeleton-${index}`}
-                  className="h-10 w-24 rounded-full bg-[#f6dfb7] animate-pulse"
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      <div className="px-4 pt-8 space-y-10">
-        {sectionPlaceholders.map((_, sectionIndex) => (
-          <div key={`section-skeleton-${sectionIndex}`} className="space-y-4">
-            <div className="h-7 w-40 bg-[#f6dfb7] rounded-md animate-pulse" />
-            <div className="flex flex-col gap-3">
-              {productPlaceholders.map((_, productIndex) => (
-                <div
-                  key={`product-skeleton-${sectionIndex}-${productIndex}`}
-                  className="flex gap-4 p-4 rounded-2xl bg-[#f9ebcf]"
-                >
-                  <div className="w-24 h-24 rounded-xl bg-[#f6dfb7] animate-pulse" />
-                  <div className="flex-1 space-y-3">
-                    <div className="h-5 w-1/2 bg-[#f6dfb7] rounded-md animate-pulse" />
-                    <div className="h-4 w-full bg-[#f0d4a3] rounded-md animate-pulse" />
-                    <div className="h-4 w-2/3 bg-[#f0d4a3] rounded-md animate-pulse" />
-                  </div>
-                  <div className="flex flex-col items-end justify-between">
-                    <div className="h-4 w-12 bg-[#f6dfb7] rounded-md animate-pulse" />
-                    <div className="h-8 w-20 bg-[#f6dfb7] rounded-full animate-pulse" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-export default function MenuPage() {
-  return (
-    <Suspense fallback={<MenuSkeleton />}>
-      <MenuContent />
-    </Suspense>
+      </section>
+      <Image
+        src="/images/پترن.svg"
+        width={1000}
+        height={1000}
+        alt="background pattern"
+        style={{
+          clipPath: "ellipse(150% 100% at 50% 0%)",
+        }}
+        className="absolute bottom-0 left-0 w-full h-96 object-cover"
+      />
+    </main>
   );
 }

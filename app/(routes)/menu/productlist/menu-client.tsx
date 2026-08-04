@@ -2,9 +2,9 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import CategoryBar from "../../ui/menu/category-bar";
-import ProductCard from "../../ui/menu/product-card";
-import { useCart } from "../../context/cart-context";
+import CategoryBar from "../../../ui/menu/category-bar";
+import ProductCard from "../../../ui/menu/product-card";
+import { useCart } from "../../../context/cart-context";
 import { Product } from "./types";
 
 const CATEGORY_ORDER = [

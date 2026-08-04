@@ -1,5 +1,5 @@
 import { createClient } from "@sanity/client";
-import { Product } from "../types";
+import { Product } from "../productlist/types";
 
 const client = createClient({
   projectId: "gw9pds6y",
