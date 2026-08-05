@@ -9,14 +9,17 @@ type CartItem = { id: number; title: string; price: number; quantity: number };
 
 export default function Page() {
   const { cart, updateCartItem } = useCart();
-  
+
   // Calculate total cart price
-  const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const totalPrice = cart.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0,
+  );
 
   return (
     <>
       <section className="h-screen bg-[#f6e7ce] ">
-     <Image
+        <Image
           src="/images/پترن.svg"
           width={1000}
           height={1000}
@@ -38,7 +41,7 @@ export default function Page() {
                 )}
               </span>
             </div>
-            <Link href={"/menu"}>
+            <Link href={"/menu/productlist"}>
               <svg
                 width="18"
                 height="18"
@@ -65,7 +68,7 @@ export default function Page() {
                 updateCartItem={updateCartItem}
               />
             ))}
-            
+
             {/* Total price section - added at the end of the list */}
             {cart.length > 0 && (
               <>
@@ -78,7 +81,6 @@ export default function Page() {
               </>
             )}
           </section>
-          
         </main>
       </section>
     </>
